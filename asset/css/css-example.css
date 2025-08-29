@@ -1,0 +1,125 @@
+/* General Body Styling */
+/* This sets the base font, colours, and background for the entire page. */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+/* Header, Nav, and Footer Styling */
+/* Styling the main structural elements for a consistent look. */
+header, footer {
+    background-color: #343a40;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+nav {
+    background-color: #495057;
+    padding: 0.75rem;
+    text-align: center;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Using a pseudo-class for interactive feedback on hover. */
+nav a:hover {
+    background-color: #6c757d;
+}
+
+/* Main Content Layout using Flexbox */
+/* This is the core of the responsive layout. */
+main {
+    max-width: 960px;
+    margin: 2rem auto; /* Center the main content */
+    padding: 0 1rem;
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto the next line on smaller screens */
+    justify-content: center;
+    gap: 1.5rem; /* Adds space between flex items */
+}
+
+/* Styling for Article and Section elements */
+/* This creates the "card" effect for each content block. */
+article, section {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    flex-basis: 100%; /* Default to full width, will be adjusted for larger screens */
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Removes the space between table cells */
+    margin-top: 1rem;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+}
+
+thead {
+    background-color: #e9ecef;
+}
+
+/* Form Styling */
+/* Using a class selector to target the div wrappers for form elements. */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensures padding doesn't affect the final width */
+}
+
+button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #007bff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Media Query for Responsive Design */
+/* This is a key part of making the site mobile-friendly. */
+@media (min-width: 768px) {
+    article, section {
+        flex-basis: 45%; /* On screens wider than 768px, make each section take up ~45% of the width */
+    }
+}

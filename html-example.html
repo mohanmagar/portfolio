@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Demonstration</title>
+    <!-- This will link to the stylesheet we create in the next section -->
+    <link rel="stylesheet" href="">
+</head>
+<body>
+
+    <!-- The <header> element is used for introductory content. It's good practice for the top of the page. -->
+    <header>
+        <h1>HTML5 Structure Demonstration</h1>
+        <p>A page showcasing modern and semantic HTML practices as learned in my module.</p>
+    </header>
+
+    <!-- The <nav> element is for major navigation links. -->
+    <nav>
+        <a href="#structure">Semantic Structure</a>
+        <a href="#tables">Tables</a>
+        <a href="#forms">Forms</a>
+    </nav>
+
+    <!-- The <main> element contains the primary content of the page. -->
+    <main>
+        <!-- I'm using <article> here because it's self-contained content that could stand on its own. -->
+        <article id="structure">
+            <h2>Semantic Structure</h2>
+            <p>This page uses semantic HTML5 elements like <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;footer&gt;</code>. I've learned that using these tags gives meaning to the content, which is important for accessibility (for screen readers) and SEO.</p>
+            
+            <!-- The 'alt' attribute is crucial for accessibility. It describes the image if it can't be seen. -->
+            <img src="https://placehold.co/800x200/007bff/ffffff?text=Semantic+HTML" alt="A banner image with the text Semantic HTML">
+        </article>
+
+        <!-- A <section> element is used here to group the related content about tables. -->
+        <section id="tables">
+            <h2>Demonstration of a Table</h2>
+            <p>The following table is structured correctly using <code>&lt;thead&gt;</code> for the header and <code>&lt;tbody&gt;</code> for the main content. This is the proper way to structure data tables.</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <!-- <th> is used for table header cells -->
+                        <th>Technology</th>
+                        <th>Purpose</th>
+                        <th>My Skill Level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <!-- <td> is used for table data cells -->
+                        <td>HTML</td>
+                        <td>Structure</td>
+                        <td>Proficient</td>
+                    </tr>
+                    <tr>
+                        <td>CSS</td>
+                        <td>Styling</td>
+                        <td>Proficient</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>Interactivity</td>
+                        <td>Intermediate</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Another <section> to group the form content. -->
+        <section id="forms">
+            <h2>Demonstration of a Form</h2>
+            <p>This form shows different input types and the use of the <code>&lt;label&gt;</code> tag. The `for` attribute on the label is linked to the `id` of the input, which is important for accessibility.</p>
+
+            <form action="#" method="POST">
+                <!-- Using a div to group each label/input pair for styling purposes. -->
+                <div class="form-group">
+                    <label for="fullName">Full Name:</label>
+                    <!-- The 'required' attribute ensures the user must fill out this field before submitting. -->
+                    <input type="text" id="fullName" name="full_name" required placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="emailAddress">Email Address:</label>
+                    <!-- type="email" provides better user experience and validation on mobile devices. -->
+                    <input type="email" id="emailAddress" name="email_address" required placeholder="you@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="enquiryType">Enquiry Type:</label>
+                    <select id="enquiryType" name="enquiry_type">
+                        <option value="general">General Enquiry</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="support">Support</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="4" required placeholder="Type your message here..."></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- The <footer> element is for the bottom of the page, often containing copyright or contact info. -->
+    <footer>
+        <p>&copy; 2025 Mohan - HTML Demonstration</p>
+    </footer>
+
+</body>
+</html>
